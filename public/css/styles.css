@@ -21,7 +21,7 @@ body {
 }
 
 header {
-    background-color: #353E48;
+    background-color: #98afca;
 }
 
 .row {
@@ -36,28 +36,44 @@ header {
     background-color: #F2A340;
     border: 2px solid #C28008;
 }
+.btn-dark {
+    background-color: #000000;
+    margin-left: 1%;
+}
+
+.btn-dark:hover {
+    background-color: #C28008;
+    border-color: #C28008;
+}
 
 .btn-primary:hover {
     background-color: #C28008;
     border-color: #C28008;
 }
 
+
 /*navbar*/
 
+.navbar-text {
+    font-size: large;
+    color: white;
+    margin-top: 6px;
+}
+
 #navbar img {
-    width: 40px;
+    width: 25px;
     margin-left: 5px;
 }
 
 #navbar {
     justify-content: space-between;
-    background-color: #353E48;
-    padding: 5px 0;
+    background-color: #98afca;
+    padding: 3px 10;
 }
 
 #navbar a {
     font-size: 14px;
-    color: #d1d1d1;
+    color: #ffffff;
 }
 
 #navbar a:hover {
@@ -110,11 +126,12 @@ header {
     max-width: 25%;
     border-radius: 10px;
     padding: 0;
-    margin: .5px;
+    margin: 2.5px;
 }
 
 #events-container img {
     max-height: 300px;
+    
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
@@ -136,11 +153,87 @@ header {
     color: #757575;
 }
 
+/*event page*/
+
+#image-container,
+#info-container {
+    margin-top: 30px;
+}
+
+#image-container img {
+    border-radius: 10px;
+}
+
+#margin-container img {
+    border-radius: 10px;
+}
+
+#info-container h1 {
+    font-size: 36px;
+    font-weight: 900;
+}
+
+#info-container p {
+    margin: 0;
+    font-size: 14px;
+    display: flex;
+}
+
+#info-container,
+#description-container h3 {
+    margin-top: 9px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#info-container ion-icon {
+    font-size: 20px;
+    color: #F2A340;
+    margin-right: 5px;
+}
+
+#info-container #event-submit {
+    margin: 20px 0;
+}
+
+#items-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+#items-list li {
+    display: flex;
+}
+
+
+/*dashboard*/
+
+.dashboard-title-container {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.dashboard-events-container th {
+    width: 25%;
+}
+
+.dashboard-events-container form {
+    display: inline-block;
+}
+
+/*edit page*/
+
+.img-preview {
+    width: 100px;
+    margin-top: 20px;
+}
+
+
 /*footer*/
 
 footer {
     text-align: center;
-    background-color: #353E48;
+    background-color: #98afca;
     color: #FFF;
     padding: 30px;
     position: absolute;

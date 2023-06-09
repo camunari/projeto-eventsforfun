@@ -30,28 +30,51 @@
 </head>
 
 <body>
+    
 
     <header>
+        
         <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="collapse navbar-collapse" id="navbar">
-                <a href="/" class="navbar-brand">
-                    <img src="/img/logo.png" alt="Events For Fun">
-                </a>
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="/" class="nav-link">Eventos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/events/create" class="nav-link">Criar Eventos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/" class="nav-link">Entrar</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/" class="nav-link">Cadastrar</a>
-                    </li>
-                </ul>
+            <div class="container">
+                {{-- <a class="navbar-brand" href="#"><h1 class="m-0"><img class="d-block" src="/img/logo.png" alt="logo da events for"></h1></a> --}}
+                <h1 class="navbar-text">Events For Fun</h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+                    aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/" class="nav-link">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/events/create" class="nav-link">Criar Eventos</a>
+                        </li>
+                        @auth
+                        <li class="nav-item">
+                            <a href="/dashboard" class="nav-link">Meus eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <form action="/logout" method="POST">
+                                @csrf
+                                <a href="/logout" class="nav-link" onclick="event.preventDefault();
+                                    this.closest('form').submit();">Sair</a>
+                            </form>
+                        </li>
+                        @endauth
+                        @guest
+                        <li class="nav-item">
+                            <a href="/login" class="nav-link">Entrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/register" class="nav-link">Cadastrar</a>
+                        </li>
+                        @endguest
+                    </ul>
+                </div>
             </div>
         </nav>
     </header>
